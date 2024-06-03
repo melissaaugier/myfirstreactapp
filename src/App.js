@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {comments} from './commentData';
+import Card from './Card';
+import Aside from './Aside';
+
+const calculateAverageRating = (comments) => {
+  if (comments.length === 0) return 0;
+  const totalRating = comments.reduce((sum, comment) => sum + comment.rating, 0);
+  return (totalRating / comments.length).toFixed(3);
+};
 
 function App() {
+  const averageRating = calculateAverageRating(comments);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Aside average_rating={averageRating} number_of_comments={comments.length} />
+      <div className='comments'>
+        {comments.map((comment, index) => (
+          <Card key={index} commentObject={comment} />
+        ))}
+      </div> 
     </div>
   );
 }
