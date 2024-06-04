@@ -17,6 +17,7 @@ body {
 
 aside { 
   flex: 1 1 auto;
+  margin-bottom: 2rem;
 }
 
 .comments {
@@ -74,3 +75,14 @@ img {
 .font-bold { font-weight: 700; }
 
 
+@media screen and (max-width: 600px) {
+  #root > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    display: none;
+  }
+}
