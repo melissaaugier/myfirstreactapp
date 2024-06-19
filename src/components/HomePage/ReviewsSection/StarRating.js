@@ -1,3 +1,5 @@
+import styles from './StarRating.module.css';
+
 const StarRating = ({ rating, showRating }) => {
     const maxStars = 5;
     const fullStar = '★';
@@ -8,7 +10,7 @@ const StarRating = ({ rating, showRating }) => {
     const emptyStars = maxStars - fullStars - (halfStar ? 1 : 0);
 
     return (
-        <div className="star_rating">
+        <div className={styles.StarRating}>
             <span >
                 {fullStar.repeat(fullStars)}
                 {halfStar}

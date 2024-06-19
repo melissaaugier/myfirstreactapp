@@ -1,0 +1,30 @@
+.Review {
+    background: rgba(65, 65, 65, 0.092);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #1c1b1b;
+    position: relative;
+}
+
+.reviewBtns {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    span {
+        margin: 0 10px;
+    }
+}
+
+
+.deleteBtn, .updateBtn {
+    font-size: 15px;
+    opacity: 0.4;
+}
+
+.deleteBtn:hover, .updateBtn:hover {
+    opacity: 1;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.Aside { 
+    position: sticky;
+    top: 2rem;
+    left: 0;
+    align-self: start;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
